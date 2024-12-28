@@ -3,13 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Homework</title>
     <script src="./js/task-1.js" defer></script>
     <script src="./js/task-2.js" defer></script>
     <script src="./js/task-3.js" defer></script>
+    <title>Image Gallery</title>
+    <style>
+      .gallery {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .gallery li img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
   </head>
   <body>
     <h1>JavaScript Homework</h1>
     <p>Підключення JavaScript файлів</p>
+    <input type="text" id="name-input" placeholder="Please enter your name" />
+    <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+    <form class="login-form">
+      <label>
+        Email
+        <input type="email" name="email" />
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" />
+      </label>
+      <button type="submit">Log in</button>
+    </form>
+    <div class="widget">
+      <p>Background color: <span class="color">-</span></p>
+      <button type="button" class="change-color">Change color</button>
+    </div>
+    <div id="controls">
+      <input
+        type="number"
+        min="1"
+        max="100"
+        step="1"
+        placeholder="Enter a number"
+      />
+      <button type="button" data-create>Create</button>
+      <button type="button" data-destroy>Destroy</button>
+    </div>
+
+    <div id="boxes"></div>
+
+    <ul id="categories">
+      <li class="item">
+        <h2>Animals</h2>
+        <ul>
+          <li>Cat</li>
+          <li>Hamster</li>
+          <li>Horse</li>
+          <li>Parrot</li>
+        </ul>
+      </li>
+      <li class="item">
+        <h2>Products</h2>
+        <ul>
+          <li>Bread</li>
+          <li>Parsley</li>
+          <li>Cheese</li>
+        </ul>
+      </li>
+      <li class="item">
+        <h2>Technologies</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="gallery"></ul>
   </body>
 </html>
